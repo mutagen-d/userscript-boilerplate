@@ -1,0 +1,48 @@
+{
+  "name": "userscript-boilerplate",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "mutagen-d",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "jquery": "3.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "mini-css-extract-plugin": "^2.7.6",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "targets": "defaults",
+          "corejs": "3.22"
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-arrow-functions"
+      ],
+      [
+        "@babel/plugin-transform-function-name"
+      ]
+    ]
+  }
+}
